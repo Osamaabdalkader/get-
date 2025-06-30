@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المشرف - متجر المستقبل</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="logo"><a href="index.html">متجر **المستقبل**</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">المتجر</a></li>
+                    <li><a href="dashboard.html">لوحة التحكم</a></li>
+                    <li><a href="#" class="active">لوحة المشرف</a></li>
+                    <li><button id="adminLogoutBtn" class="btn btn-outline">تسجيل الخروج</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container admin-page">
+        <h2>لوحة تحكم المشرف</h2>
+
+        <section class="admin-section">
+            <h3>إضافة مستخدم جديد</h3>
+            <div class="form-grid">
+                <input type="text" id="newUserName" placeholder="اسم المستخدم" required>
+                <input type="email" id="newUserEmail" placeholder="بريد المستخدم" required>
+                <input type="password" id="newUserPassword" placeholder="كلمة سر (8+ أحرف)" required>
+                <input type="text" id="newUserReferralCode" placeholder="كود إحالة المرجع (اختياري)">
+            </div>
+            <button id="addUserBtn" class="btn btn-primary">إضافة مستخدم</button>
+            <p id="addUserMessage" class="message"></p>
+        </section>
+
+        <section class="admin-section">
+            <h3>قائمة المستخدمين</h3>
+            <input type="text" id="userSearch" placeholder="ابحث عن مستخدم بالاسم أو البريد...">
+            <div class="user-list-controls">
+                <button id="promoteSelectedUsersBtn" class="btn btn-secondary">ترقية المستخدمين المحددين</button>
+                <button id="exportUsersBtn" class="btn btn-secondary">تصدير بيانات المستخدمين</button>
+            </div>
+            <ul id="usersList" class="user-list-items">
+                </ul>
+        </section>
+        
+        </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 متجر المستقبل. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
