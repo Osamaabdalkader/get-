@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجرنا الفخم - تسوق الآن</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="logo">متجر **المستقبل**</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">المتجر</a></li>
+                    <li><a href="login.html">تسجيل الدخول / الانتساب</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="hero-section">
+            <h2>اكتشف منتجاتنا الفاخرة</h2>
+            <p>الجودة والأناقة في مكان واحد. ابدأ رحلة التسوق الآن!</p>
+            <a href="#products-section" class="btn btn-primary">تصفح المنتجات</a>
+        </section>
+
+        <section id="products-section" class="products-grid-section">
+            <h3>منتجاتنا المميزة</h3>
+            <div id="products-container" class="products-grid">
+                <div class="loading-message">جاري تحميل المنتجات...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 متجر المستقبل. جميع الحقوق محفوظة. تم التطوير بواسطة **أسامة عبدالقادر سعيد عبدالالة**.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
