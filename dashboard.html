@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - متجر المستقبل</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="logo"><a href="index.html">متجر **المستقبل**</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">المتجر</a></li>
+                    <li><a href="#" class="active">لوحة التحكم</a></li>
+                    <li><button id="logoutBtn" class="btn btn-outline">تسجيل الخروج</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container dashboard-page">
+        <section class="user-profile-card">
+            <h2>أهلاً بك، <span id="userName">المستخدم</span>!</h2>
+            <div class="profile-info-grid">
+                <div><strong>البريد الإلكتروني:</strong> <span id="userEmail"></span></div>
+                <div><strong>نقاطك الحالية:</strong> <span id="userPoints">0</span></div>
+                <div><strong>مستواك:</strong> <span id="userLevel">0</span></div>
+                <div id="memberIdSection" style="display: none;"><strong>رقم عضويتك:</strong> <span id="userMemberId"></span></div>
+                <div id="referredBySection"><strong>تمت دعوتك بواسطة:</strong> <span id="userReferredBy">لا يوجد</span></div>
+            </div>
+            <div class="dashboard-actions">
+                <button id="showReferralCodeBtn" class="btn btn-secondary" style="display: none;">عرض كود الإحالة الخاص بي</button>
+                <button id="viewNetworkBtn" class="btn btn-secondary" style="display: none;">عرض شبكتي</button>
+                <a href="admin.html" id="adminPanelLink" class="btn btn-accent" style="display: none;">لوحة تحكم المشرف</a>
+            </div>
+        </section>
+        
+        </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 متجر المستقبل. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
